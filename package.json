@@ -1,0 +1,23 @@
+{
+  "name": "mx-color-logger",
+  "version": "1.0.0",
+  "description": "A simple console logger that uses colors for debug, info, warn  & error",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxotek/mx-color-logger.git"
+  },
+  "keywords": [
+    "console",
+    "logger"
+  ],
+  "author": "partho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxotek/mx-color-logger/issues"
+  },
+  "homepage": "https://github.com/maxotek/mx-color-logger#readme"
+}
