@@ -7,19 +7,17 @@ var mapping = {
     error: clc.red
 };
 
-module.exports = function () {
-    return {
-        init: function () {
-            ["log", "warn", "error"].forEach(function (method) {
-                var oldMethod = console[method].bind(console);
-                console[method] = function () {
-                    oldMethod.apply(
-                        console,
-                        [mapping[method](arguments)]
-                    );
-                };
-            });
+module.exports = {
+    init: function () {
+        ["log", "warn", "error"].forEach(function (method) {
+            var oldMethod = console[method].bind(console);
+            console[method] = function () {
+                oldMethod.apply(
+                    console,
+                    [mapping[method](arguments[0])]
+                );
+            };
+        });
 
-        }
     }
 }
