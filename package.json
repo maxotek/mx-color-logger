@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/maxotek/mx-color-logger/issues"
   },
-  "homepage": "https://github.com/maxotek/mx-color-logger#readme"
+  "homepage": "https://github.com/maxotek/mx-color-logger#readme",
+  "dependencies": {
+    "cli-color": "^1.2.0"
+  }
 }
