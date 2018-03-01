@@ -15,11 +15,11 @@ module.exports = function () {
                 console[method] = function () {
                     oldMethod.apply(
                         console,
-                        [mapping[method]()]
-                            .concat(arguments)
+                        [mapping[method](arguments)]
                     );
                 };
             });
+
         }
     }
 }
