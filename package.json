@@ -1,6 +1,6 @@
 {
   "name": "mx-color-logger",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple console logger that uses colors for debug, info, warn  & error",
   "main": "src/console.js",
   "scripts": {

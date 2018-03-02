@@ -10,12 +10,22 @@ var mapping = {
 module.exports = {
     init: function () {
         ["debug", "log", "warn", "error"].forEach(function (method) {
-            var oldMethod = console[method].bind(console);
+            var existingMethod = console[method];
+            var oldMethod = existingMethod ? existingMethod.bind(console) : null;
+
             console[method] = function () {
-                oldMethod.apply(
-                    console,
-                    [mapping[method](arguments[0])]
-                );
+                var colorer = mapping[method];
+                var msg = arguments[0];
+
+                if (oldMethod) {
+                    oldMethod.apply(
+                        console,
+                        [colorer(msg)]
+                    );
+                }
+                else {
+                    console.log(colorer(msg));
+                }
             };
         });
     }
